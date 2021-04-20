@@ -27,6 +27,32 @@ class ArgValidate
         return true;
     }
 
+    public static function getEntityIfId(&$value, string $class, $repo, string $getter)
+    {
+        if (is_int($value)) {
+            $value = $repo->$getter($value);
+        }
+
+        if (! is_a($value, $class)) {
+            static::throwArg("Invalid argument. Expected either integer ID or instance of {$class}");
+
+            return false;
+        }
+
+        return true;
+    }
+
+    public static function chainProperties(object $object, string ...$properties)
+    {
+        $current = $object;
+
+        foreach ($properties as $prop) {
+            $current = $current->$prop;
+        }
+
+        return $current;
+    }
+
     protected static function throwArg(string $message = null)
     {
         if (static::$failureShouldBeThrown) {
