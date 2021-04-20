@@ -1,0 +1,22 @@
+{
+    "name": "hexel/utilities",
+    "description": "My kitchen sink of useful utility classes.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hexel Colorado",
+            "email": "hexelcolorado@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hexel\\Utilities\\": "src/",
+            "Hexel\\Utilities\\Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
