@@ -1,6 +1,6 @@
 {
     "name": "hexel/utilities",
-    "description": "My kitchen sink of useful utility classes.",
+    "description": "My kitchen sink of useful PHP utility classes.",
     "type": "library",
     "license": "MIT",
     "authors": [
